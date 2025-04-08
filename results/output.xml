@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on linux)" generated="2025-04-08T19:24:31.354641" rpa="false" schemaversion="5">
+<suite id="s1" name="Poc-Robotframework-Selenium" source="/home/dhandyjoee/Documents/kreditplus/automation/poc-robotframework-selenium">
+<suite id="s1-s1" name="E2E" source="/home/dhandyjoee/Documents/kreditplus/automation/poc-robotframework-selenium/e2e">
+<suite id="s1-s1-s1" name="Test" source="/home/dhandyjoee/Documents/kreditplus/automation/poc-robotframework-selenium/e2e/test.robot">
+<test id="s1-s1-s1-t1" name="asd" line="13">
+<kw name="loginSallyWeb" owner="keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:31.450856" level="INFO">Opening browser 'Chrome' to base url 'https://staging-sally.kbfinansia.com/auth/login'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-08T19:24:31.450513" elapsed="6.487742"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:37.938838" level="INFO">Typing text 'dhandyjoenathan' into text field 'xpath://input[@id='username']'.</msg>
+<arg>xpath://input[@id='username']</arg>
+<arg>dhandyjoenathan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T19:24:37.938469" elapsed="0.063737"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:38.002647" level="INFO">Typing text '201017Dj*#*#' into text field 'xpath://input[@id='password']'.</msg>
+<arg>xpath://input[@id='password']</arg>
+<arg>201017Dj*#*#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T19:24:38.002399" elapsed="0.046171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:38.048997" level="INFO">Clicking element 'xpath://button[normalize-space()='LOGIN']'.</msg>
+<arg>xpath://button[normalize-space()='LOGIN']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T19:24:38.048758" elapsed="0.039606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://h3[normalize-space()='Profile']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T19:24:38.088557" elapsed="4.233643"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:42.332178" level="INFO">Element 'xpath://h3[normalize-space()='Profile']' is displayed.</msg>
+<arg>xpath://h3[normalize-space()='Profile']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T19:24:42.322387" elapsed="0.010049"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:42.332900" level="INFO">Verifying element 'xpath://h3[normalize-space()='Profile']' contains exact text 'Profile'.</msg>
+<arg>xpath://h3[normalize-space()='Profile']</arg>
+<arg>Profile</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-08T19:24:42.332641" elapsed="0.013272"/>
+</kw>
+<status status="PASS" start="2025-04-08T19:24:31.449834" elapsed="10.896288"/>
+</kw>
+<kw name="logoutSallyWeb" owner="keyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:42.347146" level="INFO">Clicking element 'xpath://div[@class='kt-header__topbar-wrapper']//img[@alt='Pic']'.</msg>
+<arg>xpath://div[@class='kt-header__topbar-wrapper']//img[@alt='Pic']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T19:24:42.346878" elapsed="0.058363"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:42.405818" level="INFO">Clicking element 'xpath://button[normalize-space()='Logout']'.</msg>
+<arg>xpath://button[normalize-space()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T19:24:42.405515" elapsed="0.063324"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:42.469310" level="INFO">Clicking element 'xpath://button[normalize-space()='Yes!']'.</msg>
+<arg>xpath://button[normalize-space()='Yes!']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T19:24:42.469052" elapsed="0.649045"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:43.133925" level="INFO">Element 'xpath://h3[normalize-space()='LOGIN']' is displayed.</msg>
+<arg>xpath://h3[normalize-space()='LOGIN']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-08T19:24:43.118308" elapsed="0.015821"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-08T19:24:43.134682" level="INFO">Verifying element 'xpath://h3[normalize-space()='LOGIN']' contains exact text 'LOGIN'.</msg>
+<arg>xpath://h3[normalize-space()='LOGIN']</arg>
+<arg>LOGIN</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-08T19:24:43.134321" elapsed="0.009800"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-08T19:24:43.144416" elapsed="0.061766"/>
+</kw>
+<status status="PASS" start="2025-04-08T19:24:42.346463" elapsed="0.859869"/>
+</kw>
+<status status="PASS" start="2025-04-08T19:24:31.449030" elapsed="11.757493"/>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="PASS" start="2025-04-08T19:24:31.369750" elapsed="11.837373"/>
+</suite>
+<status status="PASS" start="2025-04-08T19:24:31.368667" elapsed="11.839223"/>
+</suite>
+<status status="PASS" start="2025-04-08T19:24:31.356561" elapsed="11.852034"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Poc-Robotframework-Selenium" id="s1" pass="1" fail="0" skip="0">Poc-Robotframework-Selenium</stat>
+<stat name="E2E" id="s1-s1" pass="1" fail="0" skip="0">Poc-Robotframework-Selenium.E2E</stat>
+<stat name="Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Poc-Robotframework-Selenium.E2E.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
