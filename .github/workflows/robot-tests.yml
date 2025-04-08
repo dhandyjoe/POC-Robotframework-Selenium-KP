@@ -2,8 +2,8 @@ name: Run Robot Framework Tests
 
 on:
     push:
-        # branches:
-        #     - master
+        branches:
+            - master
         paths:
             - "e2e/simple.robot"
             - "requirements.txt"
