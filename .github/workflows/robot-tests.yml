@@ -2,14 +2,14 @@ name: Run Robot Framework Tests
 
 on:
     push:
-        branches:
-            - master
+        # branches:
+        #     - master
         paths:
             - "e2e/simple.robot"
             - "requirements.txt"
-    pull_request:
-        branches:
-            - master
+    # pull_request:
+    #     branches:
+    #         - master
 jobs:
     robot-tests:
         runs-on: ubuntu-latest
