@@ -4,9 +4,9 @@ on:
     push:
         branches:
             - master
-        paths:
-            - "e2e/simple.robot"
-            - "requirements.txt"
+        # paths:
+        #     - "e2e/simple.robot"
+        # - "requirements.txt"
 jobs:
     robot-tests:
         runs-on: ubuntu-latest
