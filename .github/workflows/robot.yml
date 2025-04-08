@@ -28,7 +28,6 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
                   python -m webdrivermanager chrome --linkpath /usr/local/bin
-
-            - name: Run Robot Framework tests
+            - name: Run test
               run: |
                   robot e2e/simple.robot
