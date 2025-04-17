@@ -1,83 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on linux)" generated="2025-04-08T19:53:07.161280" rpa="false" schemaversion="5">
-<suite id="s1" name="Simple" source="/home/dhandyjoee/Documents/kreditplus/automation/poc-robotframework-selenium/e2e/simple.robot">
-<test id="s1-t1" name="test valid login" line="11">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on linux)" generated="2025-04-11T17:08:43.644673" rpa="false" schemaversion="5">
+<suite id="s1" name="Gherkin" source="/home/dhandyjoee/Documents/kreditplus/automation/poc-robotframework-selenium/e2e/gherkin.robot">
+<test id="s1-t1" name="gherkin-test" line="11">
+<kw name="Given open login page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-08T19:53:07.243964" level="INFO">Opening browser 'Chrome' to base url 'https://staging-sally.kbfinansia.com/auth/login'.</msg>
-<msg time="2025-04-08T19:53:09.924336" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997c45450&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/85fc5a10f3853b633290cc140cab6407/screenshot</msg>
-<msg time="2025-04-08T19:53:09.924947" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997c451d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/85fc5a10f3853b633290cc140cab6407/screenshot</msg>
-<msg time="2025-04-08T19:53:09.925373" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997d27820&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/85fc5a10f3853b633290cc140cab6407/screenshot</msg>
-<msg time="2025-04-08T19:53:09.925722" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=41033): Max retries exceeded with url: /session/85fc5a10f3853b633290cc140cab6407/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997d27bb0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<msg time="2025-04-11T17:08:43.720659" level="INFO">Opening browser 'Chrome' to base url 'https://staging-sally.kbfinansia.com/auth/login'.</msg>
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=${CHROME_OPTIONS}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-04-08T19:53:07.243713" elapsed="2.682118">Execution terminated by signal</status>
+<status status="PASS" start="2025-04-11T17:08:43.720397" elapsed="2.109550"/>
 </kw>
+<status status="PASS" start="2025-04-11T17:08:43.719864" elapsed="2.110273"/>
+</kw>
+<kw name="When input username and password">
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:45.830840" level="INFO">Typing text 'dhandyjoenathan' into text field 'xpath://input[@id='username']'.</msg>
 <arg>xpath://input[@id='username']</arg>
 <arg>dhandyjoenathan</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-08T19:53:09.926031" elapsed="0.000089"/>
+<status status="PASS" start="2025-04-11T17:08:45.830601" elapsed="0.061048"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:45.891948" level="INFO">Typing text '201017Dj*#*#' into text field 'xpath://input[@id='password']'.</msg>
 <arg>xpath://input[@id='password']</arg>
 <arg>201017Dj*#*#</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-08T19:53:09.926244" elapsed="0.000022"/>
+<status status="PASS" start="2025-04-11T17:08:45.891790" elapsed="0.042764"/>
 </kw>
+<status status="PASS" start="2025-04-11T17:08:45.830368" elapsed="0.104286"/>
+</kw>
+<kw name="And click button Login">
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:45.935314" level="INFO">Clicking element 'xpath://button[normalize-space()='LOGIN']'.</msg>
 <arg>xpath://button[normalize-space()='LOGIN']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-08T19:53:09.926355" elapsed="0.000025"/>
+<status status="PASS" start="2025-04-11T17:08:45.935139" elapsed="3.502173"/>
 </kw>
+<status status="PASS" start="2025-04-11T17:08:45.934878" elapsed="3.502594"/>
+</kw>
+<kw name="Then login success">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath://h3[normalize-space()='Profile']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-04-08T19:53:09.926495" elapsed="0.000027"/>
+<status status="PASS" start="2025-04-11T17:08:49.437879" elapsed="0.015514"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:49.462586" level="INFO">Element 'xpath://h3[normalize-space()='Profile']' is displayed.</msg>
 <arg>xpath://h3[normalize-space()='Profile']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-04-08T19:53:09.926611" elapsed="0.000017"/>
+<status status="PASS" start="2025-04-11T17:08:49.453543" elapsed="0.009123"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:49.462942" level="INFO">Verifying element 'xpath://h3[normalize-space()='Profile']' contains exact text 'Profile'.</msg>
 <arg>xpath://h3[normalize-space()='Profile']</arg>
 <arg>Profile</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="NOT RUN" start="2025-04-08T19:53:09.926697" elapsed="0.000016"/>
+<status status="PASS" start="2025-04-11T17:08:49.462785" elapsed="0.010773"/>
 </kw>
-<kw name="logoutSallyWeb">
-<status status="NOT RUN" start="2025-04-08T19:53:09.926884" elapsed="0.000026"/>
+<status status="PASS" start="2025-04-11T17:08:49.437678" elapsed="0.035971"/>
 </kw>
-<status status="FAIL" start="2025-04-08T19:53:07.243035" elapsed="2.684027">Execution terminated by signal</status>
-</test>
-<test id="s1-t2" name="test invalid login" line="21">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-04-08T19:53:09.927245" elapsed="0.000214">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-t3" name="test null username password" line="31">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-04-08T19:53:09.927591" elapsed="0.000229">Test execution stopped due to a fatal error.</status>
+<kw name="Then logout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:49.474282" level="INFO">Clicking element 'xpath://div[@class='kt-header__topbar-wrapper']//img[@alt='Pic']'.</msg>
+<arg>xpath://div[@class='kt-header__topbar-wrapper']//img[@alt='Pic']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T17:08:49.474149" elapsed="0.051223"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:49.525943" level="INFO">Clicking element 'xpath://button[normalize-space()='Logout']'.</msg>
+<arg>xpath://button[normalize-space()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T17:08:49.525686" elapsed="0.048231"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:49.574237" level="INFO">Clicking element 'xpath://button[normalize-space()='Yes!']'.</msg>
+<arg>xpath://button[normalize-space()='Yes!']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-11T17:08:49.574081" elapsed="0.561486"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:50.147606" level="INFO">Element 'xpath://h3[normalize-space()='LOGIN']' is displayed.</msg>
+<arg>xpath://h3[normalize-space()='LOGIN']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-11T17:08:50.135704" elapsed="0.011984"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-11T17:08:50.147961" level="INFO">Verifying element 'xpath://h3[normalize-space()='LOGIN']' contains exact text 'LOGIN'.</msg>
+<arg>xpath://h3[normalize-space()='LOGIN']</arg>
+<arg>LOGIN</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-11T17:08:50.147810" elapsed="0.007457"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-11T17:08:50.155455" elapsed="0.059161"/>
+</kw>
+<status status="PASS" start="2025-04-11T17:08:49.473868" elapsed="0.740836"/>
+</kw>
+<status status="PASS" start="2025-04-11T17:08:43.719381" elapsed="6.495447"/>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="FAIL" start="2025-04-08T19:53:07.161817" elapsed="2.766453"/>
+<status status="PASS" start="2025-04-11T17:08:43.645164" elapsed="6.569939"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat info="combined" combined="NOT robot:exit" pass="0" fail="1" skip="0">NOT robot:exit</stat>
 </tag>
 <suite>
-<stat name="Simple" id="s1" pass="0" fail="3" skip="0">Simple</stat>
+<stat name="Gherkin" id="s1" pass="1" fail="0" skip="0">Gherkin</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-08T19:53:09.924336" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997c45450&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/85fc5a10f3853b633290cc140cab6407/screenshot</msg>
-<msg time="2025-04-08T19:53:09.924947" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997c451d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/85fc5a10f3853b633290cc140cab6407/screenshot</msg>
-<msg time="2025-04-08T19:53:09.925373" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997d27820&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/85fc5a10f3853b633290cc140cab6407/screenshot</msg>
-<msg time="2025-04-08T19:53:09.925722" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=41033): Max retries exceeded with url: /session/85fc5a10f3853b633290cc140cab6407/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f1997d27bb0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
 </errors>
 </robot>
